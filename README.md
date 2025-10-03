@@ -331,35 +331,6 @@ per_device_batch_size = 1         # Batch size per GPU
 - **3D Action Accuracy**: ~80% for vertical movements
 - **Real-time Capability**: 2-3 Hz control frequency
 
-## Troubleshooting
-
-**CUDA Out of Memory:**
-- Use 0.5B model instead of 7B
-- Reduce batch size
-- Enable quantization (4-bit/8-bit)
-
-**Habitat-Sim Installation Issues:**
-- Ensure CUDA toolkit is installed
-- Build from source with `--with-cuda --bullet`
-- Check compatibility with your GPU driver
-
-**Model Download Failures:**
-- Use `huggingface-cli` with `--resume-download`
-- Check internet connection and disk space
-- Verify Hugging Face token for gated models
-
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@article{your_paper,
-  title={Drone Visual Language Navigation with Topological Mapping},
-  author={Your Name},
-  journal={arXiv preprint},
-  year={2024}
-}
-```
 
 ## License
 
@@ -371,7 +342,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) for segmentation
 - [Habitat-Sim](https://github.com/facebookresearch/habitat-sim) for simulation
 - [R2R Dataset](https://bringmeaspoon.org/) for navigation benchmarks
-
-## Contact
-
-For questions or issues, please open a GitHub issue or contact [your-email@example.com]
