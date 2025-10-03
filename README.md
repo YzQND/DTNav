@@ -23,10 +23,10 @@ A 3D drone navigation system that combines vision-language models (LLaVA-OneVisi
 
 ## System Requirements
 
-- **GPU**: NVIDIA GPU with at least 24GB VRAM (for 7B model) or 16GB (for 0.5B model)
+- **GPU**: NVIDIA GPU with at least 24GB VRAM
 - **RAM**: 32GB+ recommended
 - **Storage**: 100GB+ for models and datasets
-- **OS**: Linux (Ubuntu 18.04+ recommended)
+- **OS**: Linux (Ubuntu 22.04 recommended)
 - **CUDA**: 11.7 or higher
 
 ## Installation
@@ -224,47 +224,6 @@ python drone_evaluate.py \
 
 ## Usage Guide
 
-### Basic Navigation System
-
-#### 1. Initialize Navigation System
-
-```python
-from navigation_system import LandmarkNavigationSystem
-
-nav_system = LandmarkNavigationSystem(
-    fastsam_model_path="FastSAM-x.pt",
-    siglip_model_path="google/siglip-so400m-patch14-384",
-    base_similarity_threshold=0.75
-)
-```
-
-#### 2. Process Image Sequence
-
-```python
-# Process images and build topological graph
-image_paths = ["image1.jpg", "image2.jpg", "image3.jpg"]
-nav_system.process_image_sequence(
-    image_paths,
-    sample_interval=1,
-    quality_threshold=0.65
-)
-```
-
-#### 3. Query with Natural Language
-
-```python
-# Find landmarks matching instruction
-results = nav_system.query_landmarks(
-    instruction="red door",
-    top_k=5
-)
-
-# Get navigation path
-path = nav_system.get_navigation_path(
-    current_image_path="current.jpg",
-    target_instruction="go to the kitchen"
-)
-```
 
 ### Data Collection
 
@@ -295,7 +254,6 @@ The training pipeline supports:
 - Overall navigation accuracy
 - Per-action accuracy (including 3D-specific actions)
 - Inference latency
-- Real-time performance (target: <333ms/3Hz)
 
 ## Configuration
 
@@ -323,14 +281,6 @@ lora_r = 128                      # LoRA rank
 num_train_epochs = 3              # Training epochs
 per_device_batch_size = 1         # Batch size per GPU
 ```
-
-## Performance
-
-- **Navigation Accuracy**: ~85% on custom indoor scenarios
-- **Inference Speed**: ~300-400ms per decision (7B model)
-- **3D Action Accuracy**: ~80% for vertical movements
-- **Real-time Capability**: 2-3 Hz control frequency
-
 
 ## License
 
