@@ -135,7 +135,7 @@ cd basic_system
 
 # Run navigation test on R2R dataset
 python r2r_test_script.py \
-    --model_size 7b \
+    --model_size 0.5B \
     --enable_visualization \
     --navigation_visualization
 ```
@@ -190,7 +190,7 @@ python drone_converter.py \
 ```bash
 # Single GPU
 python drone_finetune.py \
-    --model_name_or_path models/llava-onevision-qwen2-7b-ov \
+    --model_name_or_path models/llava-onevision-qwen2-0.5b-ov \
     --data_path llava_drone_3d_navigation_data/drone_3d_navigation_train.json \
     --image_folder llava_drone_3d_navigation_data \
     --output_dir drone_navigation_finetuned \
