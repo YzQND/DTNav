@@ -1,4 +1,4 @@
-# Drone Visual Language Navigation System
+# DTNav: Dual-Target Vision–Language Navigation with Decoupled Topological Memory for Indoor UAVs
 
 A 3D drone navigation system that combines vision-language models (LLaVA-OneVision) with topological mapping for indoor navigation tasks. The system supports data collection, training, and real-time navigation with natural language instructions.
 
