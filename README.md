@@ -89,11 +89,7 @@ mkdir -p models
 # Download FastSAM
 wget https://github.com/CASIA-IVA-Lab/FastSAM/releases/download/v1.0/FastSAM-x.pt -P models/
 
-# Download LLaVA-OneVision (choose one)
-# For 7B model (recommended):
-huggingface-cli download lmms-lab/llava-onevision-qwen2-7b-ov --local-dir models/llava-onevision-qwen2-7b-ov
-
-# For 0.5B model (lightweight):
+# Download LLaVA-OneVision
 huggingface-cli download lmms-lab/llava-onevision-qwen2-0.5b-ov --local-dir models/llava-onevision-qwen2-0.5b-ov
 
 # Download SigLIP (will auto-download on first use)
