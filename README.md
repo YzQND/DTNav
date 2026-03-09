@@ -24,9 +24,7 @@ A 3D drone navigation system that combines vision-language models (LLaVA-OneVisi
 
 ## Dataset
 
-We release **DTNav-Topo**, a topological navigation graph dataset built on top of **IndoorUAV-VLN**. It contains **5,000 landmark-level topological navigation graphs** constructed from IndoorUAV trajectories and is intended to support training and benchmarking for landmark-mediated indoor UAV navigation.
-
-Hugging Face dataset: **https://huggingface.co/datasets/shujaisd/DTNav-topo**
+We release **DTNav-Topo**, a topological navigation graph dataset built on top of [IndoorUAV-VLN](https://www.modelscope.cn/datasets/valyentine/Indoor_UAV). The dataset is available at [Hugging Face](https://huggingface.co/datasets/shujaisd/DTNav-topo).
 
 ## System Requirements
 
@@ -280,7 +278,7 @@ vertical_amount = 0.25            # Vertical step size
 **Training:**
 ```python
 learning_rate = 2e-5              # LoRA learning rate
-lora_r = 128                      # LoRA rank
+lora_r = 32                       # LoRA rank
 num_train_epochs = 3              # Training epochs
 per_device_batch_size = 1         # Batch size per GPU
 ```
