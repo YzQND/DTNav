@@ -5,6 +5,7 @@ A 3D drone navigation system that combines vision-language models (LLaVA-OneVisi
 ## Table of Contents
 
 - [Features](#features)
+- [Dataset](#dataset)
 - [System Requirements](#system-requirements)
 - [Installation](#installation)
 - [Project Structure](#project-structure)
@@ -20,6 +21,12 @@ A 3D drone navigation system that combines vision-language models (LLaVA-OneVisi
 - **Scene-Aware Navigation**: Multi-modal landmark recognition with scene understanding
 - **Dual-Target Strategy**: Combines visible guide landmarks with final target landmarks
 - **R2R Format Support**: Compatible with Room-to-Room dataset format
+
+## Dataset
+
+We release **DTNav-Topo**, a topological navigation graph dataset built on top of **IndoorUAV-VLN**. It contains **5,000 landmark-level topological navigation graphs** constructed from IndoorUAV trajectories and is intended to support training and benchmarking for landmark-mediated indoor UAV navigation.
+
+Hugging Face dataset: **https://huggingface.co/datasets/shujaisd/DTNav-topo**
 
 ## System Requirements
 
